@@ -1,0 +1,209 @@
+Folder: Dash-01 (subfolders: True, STEP: True, check only: False)
+
+Exported (175):
+  000_Assy_Full
+  Leg_assembly
+  SpiderBot_to_export
+  SpiderBot_to_export_backup
+  Thigh_right_Component34
+  Calibration/calibrateur_robot
+  Calibration/DASH_01_calib_abduc
+  EXPORT1/EXPORT_achilles_left
+  EXPORT1/EXPORT_achilles_right
+  EXPORT1/EXPORT_assembly
+  EXPORT1/EXPORT_assembly_homing
+  EXPORT1/EXPORT_body
+  EXPORT1/EXPORT_cam_left
+  EXPORT1/EXPORT_cam_right
+  EXPORT1/EXPORT_foot
+  EXPORT1/EXPORT_hip_left
+  EXPORT1/EXPORT_hip_right
+  EXPORT1/EXPORT_pushrod_left
+  EXPORT1/EXPORT_pushrod_right
+  EXPORT1/EXPORT_thigh_left
+  EXPORT1/EXPORT_thigh_right
+  EXPORT1/EXPORT_tibia_left
+  EXPORT1/EXPORT_tibia_right
+  EXPORT2/EXPORT_achilles_left
+  EXPORT2/EXPORT_achilles_right
+  EXPORT2/EXPORT_assembly
+  EXPORT2/EXPORT_assembly_homing
+  EXPORT2/EXPORT_body
+  EXPORT2/EXPORT_cam_left
+  EXPORT2/EXPORT_cam_right
+  EXPORT2/EXPORT_foot
+  EXPORT2/EXPORT_foot
+  EXPORT2/EXPORT_hip_left
+  EXPORT2/EXPORT_pushrod_left
+  EXPORT2/EXPORT_pushrod_right
+  EXPORT2/EXPORT_thight_left
+  EXPORT2/EXPORT_thight_right
+  EXPORT2/EXPORT_tibia_left
+  EXPORT2/EXPORT_tibia_right
+  Fast_optimisation/Dash01_leftleg_footV1
+  Fast_optimisation/Dash01_rightleg_footV1
+  Fast_optimisation/Foot_assembly
+  Fast_optimisation/Foot_triangle
+  Fast_optimisation/Foot_triangle2
+  Fast_optimisation/Foot_V1
+  Fast_optimisation/Foot_V1_Foot_spacer
+  Fast_optimisation/Foot_V1_sole
+  Fast_optimisation/Foot_V1_triangle
+  Fast_optimisation/SpiderBot_to_export_PushrodRightNCS_v2
+  Full_robot_parts/A9_Frame-public.stp
+  Full_robot_parts/Achilles Base_Défaut
+  Full_robot_parts/Adduction Base
+  Full_robot_parts/Ankle Bearing Support
+  Full_robot_parts/Ankle Bearing Support 1_Défaut
+  Full_robot_parts/Ankle Bearing Support 2_Défaut
+  Full_robot_parts/BMSfixer
+  Full_robot_parts/Chassis Connector
+  Full_robot_parts/Driver Connector 2
+  Full_robot_parts/Hip Hinge Base
+  Full_robot_parts/Hip Hinge Base 2
+  Full_robot_parts/JFM-0810-05
+  Full_robot_parts/Phantom inner_Défaut
+  Full_robot_parts/Phantom outer_Défaut
+  Full_robot_parts/raspberry_pi_3_b_plus
+  Leg_components/Adduction_Base
+  Leg_components/four_bar_bend_Défaut
+  Leg_components/four_bar_hip_adapter_Défaut
+  Leg_components/four_bar_hip_adapter_Défaut
+  Leg_components/four_bar_knee_adapter_Défaut
+  Leg_components/l3
+  Leg_components/Moteur1
+  Leg_components/Moteur2
+  Leg_components/Shin_Plate_Défaut
+  Leg_components/Shin_Spacer_Défaut
+  Leg_components/Upper_Leg_Plate_Défaut
+  Leg_components/Upper_Leg_Spacer_Défaut
+  Leg_components/Upper Leg Plate_Défaut
+  V2/Achilles_left
+  V2/Achilles_right
+  V2/AKE90-8-KV35_motor
+  V2/BMS
+  V2/Body
+  V2/Body_metal_part_top
+  V2/Cam
+  V2/carbon_tube_maintainer
+  V2/circlip
+  V2/DCDCbuck
+  V2/EXPORT2_calibration
+  V2/Foot_pin
+  V2/Foot_right
+  V2/Full_V2_assembly
+  V2/goupille_circlip_adapter
+  V2/Hip
+  V2/Hip_bumper
+  V2/Hip_hip_pcb_holder_V3
+  V2/Hip_Motor_pcb_cover
+  V2/hip_pcb_holder_V2
+  V2/Hip Hinge Base
+  V2/Hip Hinge Base 2 3dP
+  V2/Hip Motor Connector
+  V2/Hip Motor Connector_ball_bearing
+  V2/palier_lisse
+  V2/palier_lisse_L
+  V2/ParametricGrill v24
+  V2/PCB_spacer
+  V2/Push_rod_assembly
+  V2/push_rod_attache
+  V2/push_rod_attache
+  V2/push_rod_cap
+  V2/push_rod_carbon
+  V2/Push_rod_pin
+  V2/SpiderBot_to_export_base
+  V2/Srew_M5_16mm
+  V2/Srew_M5_25mm
+  V2/Srew_M5_50mm
+  V2/Thigh_right
+  V2/Thigh_right_goupille_genoux
+  V2/Thigh_right_knee_interior_part
+  V2/thigh_small_screw_adapter
+  V2/tibia_left
+  V2/tibia_right
+  V2/Tube_AttachmentHeelRigid
+  V2/Tube_AttachmentHeelRigid_left
+  V2/Tube_AttachmentHeelRigid_right
+  V2/Tube_Attachmentknee
+  V2/Tube_Attachmentknee_left
+  V2/Tube_Attachmentknee_right
+  V2/Washer_M5
+  V2/Xshape_calibration
+  V2_backup_03112026/Achilles_left
+  V2_backup_03112026/Achilles_right
+  V2_backup_03112026/AKE90-8-KV35_motor
+  V2_backup_03112026/BMS
+  V2_backup_03112026/Body
+  V2_backup_03112026/Body_metal_part_top
+  V2_backup_03112026/Cam
+  V2_backup_03112026/carbon_tube_maintainer
+  V2_backup_03112026/circlip
+  V2_backup_03112026/DCDCbuck
+  V2_backup_03112026/Foot_right
+  V2_backup_03112026/Full_V2_assembly
+  V2_backup_03112026/goupille_circlip_adapter
+  V2_backup_03112026/Hip
+  V2_backup_03112026/Hip_bumper
+  V2_backup_03112026/Hip_hip_pcb_holder_V3
+  V2_backup_03112026/Hip_Motor_pcb_cover
+  V2_backup_03112026/hip_pcb_holder_V2
+  V2_backup_03112026/Hip Hinge Base
+  V2_backup_03112026/Hip Hinge Base 2 3dP
+  V2_backup_03112026/Hip Motor Connector
+  V2_backup_03112026/Hip Motor Connector_ball_bearing
+  V2_backup_03112026/palier_lisse
+  V2_backup_03112026/palier_lisse_L
+  V2_backup_03112026/PCB_spacer
+  V2_backup_03112026/Push_rod_assembly
+  V2_backup_03112026/push_rod_attache
+  V2_backup_03112026/push_rod_cap
+  V2_backup_03112026/push_rod_carbon
+  V2_backup_03112026/Push_rod_pin
+  V2_backup_03112026/SpiderBot_to_export_base
+  V2_backup_03112026/Srew_M5_16mm
+  V2_backup_03112026/Srew_M5_25mm
+  V2_backup_03112026/Srew_M5_50mm
+  V2_backup_03112026/Thigh_right
+  V2_backup_03112026/Thigh_right_goupille_genoux
+  V2_backup_03112026/Thigh_right_knee_interior_part
+  V2_backup_03112026/tibia_left
+  V2_backup_03112026/tibia_right
+  V2_backup_03112026/Tube_AttachmentHeelRigid
+  V2_backup_03112026/Tube_AttachmentHeelRigid_left
+  V2_backup_03112026/Tube_AttachmentHeelRigid_right
+  V2_backup_03112026/Tube_Attachmentknee
+  V2_backup_03112026/Tube_Attachmentknee_left
+  V2_backup_03112026/Tube_Attachmentknee_right
+  V2_backup_03112026/Washer_M5
+
+Failed (0):
+
+Assemblies with external references, export by hand as .f3z (27):
+  Leg_assembly (10 referenced occurrences)
+  SpiderBot_to_export (2 referenced occurrences)
+  EXPORT1/EXPORT_assembly (15 referenced occurrences)
+  EXPORT1/EXPORT_assembly_homing (15 referenced occurrences)
+  EXPORT2/EXPORT_assembly (15 referenced occurrences)
+  EXPORT2/EXPORT_assembly_homing (15 referenced occurrences)
+  Fast_optimisation/Dash01_leftleg_footV1 (3 referenced occurrences)
+  Fast_optimisation/Dash01_rightleg_footV1 (3 referenced occurrences)
+  Fast_optimisation/Foot_assembly (3 referenced occurrences)
+  V2/Achilles_left (7 referenced occurrences)
+  V2/Achilles_right (7 referenced occurrences)
+  V2/Body (6 referenced occurrences)
+  V2/Cam (14 referenced occurrences)
+  V2/EXPORT2_calibration (15 referenced occurrences)
+  V2/Foot_right (1 referenced occurrences)
+  V2/Full_V2_assembly (139 referenced occurrences)
+  V2/Hip (17 referenced occurrences)
+  V2/Push_rod_assembly (10 referenced occurrences)
+  V2/Thigh_right (6 referenced occurrences)
+  V2_backup_03112026/Achilles_left (7 referenced occurrences)
+  V2_backup_03112026/Achilles_right (7 referenced occurrences)
+  V2_backup_03112026/Body (6 referenced occurrences)
+  V2_backup_03112026/Cam (14 referenced occurrences)
+  V2_backup_03112026/Full_V2_assembly (125 referenced occurrences)
+  V2_backup_03112026/Hip (17 referenced occurrences)
+  V2_backup_03112026/Push_rod_assembly (10 referenced occurrences)
+  V2_backup_03112026/Thigh_right (4 referenced occurrences)
