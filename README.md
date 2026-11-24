@@ -36,7 +36,7 @@ reports and videos in [`dash-reports`](https://github.com/Dash-organisation/dash
 ## From Fusion to a usable model (summary)
 
 ```
-Fusion 360 (Hybrid design, flat, Revolute joints, closure joints deleted)
+Fusion 360 (Hybrid, no timeline, flat, Revolute joints, loop closures removed)
    │  ACDC4Robot v1.1.1 → MJCF                        (manual, see pipeline/README.md §1–3)
    ▼
 <export>.xml + meshes/ + acdc4robot-export-report.json        tree, 14 joints, CAD masses (~5.3 kg)

@@ -55,16 +55,18 @@ python pipeline/checks/stability.py    models/<folder>/EXPORT_assembly-v<N>_clos
 |---|---|---|
 | 1 | Design type **Hybrid** (*Document Settings → pencil*). With type *Assembly*, the Fusion API breaks `allJoints`. | `RuntimeError: 2 : InternalValidationError : jo…` |
 | 2 | **Flat** structure: every occurrence directly under the root, each with a BRep solid | preflight: *nested occurrence* / *mesh-only* |
-| 3 | Parts linked by Revolute **Joints**, **not** by alignment constraints (the add-in ignores constraints) | preflight: *disconnected link* |
+| 3 | Parts linked by Revolute **Joints**, **not** by alignment constraints (the add-in ignores constraints), with both limits set and 0 in the standing pose if possible | preflight: *disconnected link* |
 | 4 | Base (`EXPORT_body`) grounded, and no joint to Fusion's root/ground | preflight: *grounded endpoint* |
-| 5 | Closure joints **deleted** (Delete, not Suppress): `pushrod↔tibia` and `achilles↔foot`, both sides | preflight: *has more than one parent* |
+| 5 | Loops **open**: the closures `pushrod↔tibia` and `achilles↔foot` (both sides) are alignment constraints, removed just before the export (or closure joints deleted, not suppressed) | preflight: *has more than one parent* |
 | 6 | **Pins aligned** at the export pose: the bores of the rod and of the attachment part coincide | `close_loops.py`: *bore centres X mm apart* |
 | 7 | Joint limits: enable **both** bounds (min and max), otherwise the joint comes out without `range` | unlimited joint in MuJoCo |
 | 8 | Names in `[A-Za-z0-9_-]` only (no "Révolution", no spaces) | renamed or failed export |
 
-For rule 5, keep **two Fusion files**: the **closed** assembly for design work and *Drive Joints*,
-and an **open** copy for the export. Before deleting the closure joints in the copy, check that the
-pins are aligned (rule 6).
+For rule 5, close the two loops with **alignment (collinearity) constraints** between the pin axes
+instead of joints: the assembly then moves like the robot for design work and *Drive Joints*. Just
+before the export, remove these constraints and check that the pins are still aligned (rule 6).
+Also: every part prepared as one merged body on its own origin, and no design history (timeline) in
+the parts or the assembly; export as **MJCF**, not URDF. Why and how: [`../TIPS.md`](../TIPS.md) §1.
 
 Expected preflight result: **15 links, 14 joints**, no error. The warning *Referenced components…*
 is harmless.
