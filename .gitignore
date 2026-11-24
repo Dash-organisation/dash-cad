@@ -11,3 +11,6 @@ MUJOCO_LOG.TXT
 # Fusion temporary / backup files
 *.f3d.bak
 ~$*
+
+# graphify knowledge graph (built locally)
+graphify-out/
