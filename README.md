@@ -13,7 +13,7 @@ reports and videos in [`dash-reports`](https://github.com/Dash-organisation/dash
 
 | Folder | Contents |
 | --- | --- |
-| [`fusion/`](fusion/) | **The CAD**: full export of the Fusion project, every part and assembly as `.f3d` + `.step`, `.f3z` for the main assemblies. Current design in `fusion/EXPORT_Xshape/`. Start here. |
+| [`fusion/`](fusion/) | **The CAD**: full export of the Fusion project, every part and assembly as `.f3d` + `.step`, `.f3z` for the main assemblies. Current design in `fusion/xshape/`, older work in `fusion/archive/`. Start here. |
 | [`models/`](models/) | MuJoCo models exported from Fusion, one folder per design × pose. Name table in [`models/README.md`](models/README.md). |
 | [`pipeline/`](pipeline/) | Fusion → MJCF scripts, in order, with the full procedure in [`pipeline/README.md`](pipeline/README.md). |
 | [`properties/`](properties/) | Fusion mass properties (PDF + extracted JSON) and the body ↔ part mappings. |

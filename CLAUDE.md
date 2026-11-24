@@ -6,8 +6,9 @@ Write code, docs and commit messages in English.
 
 ## Layout
 
-- `fusion/` — full export of the Fusion Hub project (Hub folder tree, every design as `.f3d` + `.step`, `.f3z` for the main
-  assemblies). Current design: `fusion/EXPORT_Xshape/EXPORT_assembly_v8.f3z`. `fusion/tools/`: export script, `check_f3z.py`.
+- `fusion/` — full export of the Fusion Hub project (every design as `.f3d` + `.step`, `.f3z` for the main assemblies):
+  `xshape/` (current design, `EXPORT_assembly_v8.f3z`), `v2-export/`, `v2-full/`, `calibration/`, `archive/` (old work, kept),
+  `tools/` (export script, `check_f3z.py`). Never delete CAD files: move unused ones to `fusion/archive/`.
   **The source of truth**; everything else is derived from it.
 - `models/<design>-<pose>-f<N>/` — MuJoCo models (`v2-standing-f34`, `v2-standing-f36`, `v2-init-f7`,
   `xshape-standing-f8`, `xshape-init-f8`). Name table and old names: `models/README.md`. Current design: `xshape-*-f8`.
