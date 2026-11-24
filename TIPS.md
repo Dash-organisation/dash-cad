@@ -22,6 +22,10 @@ The full procedure is in [`pipeline/README.md`](pipeline/README.md); this page i
 - **ASCII names only.** The French Fusion names (`Révolution-12`) broke the previous team's scripts.
   Name components `EXPORT_<part>_<left|right>` from the start.
 - Expected preflight: **15 links, 14 joints**. Anything else means a structure problem.
+- **Save assemblies as `.f3z`, not `.f3d`.** An assembly that inserts parts from other files keeps only
+  cloud links in an `.f3d`: off the Hub it opens empty. The Hub's folder download skips designs and the
+  Fusion API writes only `.f3d`, so export assemblies by hand (*File → Export → Fusion Archive*) and
+  check them with `fusion/tools/check_f3z.py`. See [`fusion/README.md`](fusion/README.md).
 
 ## 2. What the export gets wrong (and how the pipeline handles it)
 

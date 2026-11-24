@@ -13,7 +13,7 @@ reports and videos in [`dash-reports`](https://github.com/Dash-organisation/dash
 
 | Folder | Contents |
 | --- | --- |
-| [`fusion/`](fusion/) | **The current design**: Fusion 360 archive (`.f3z`) and STEP of the assembly. Start here. |
+| [`fusion/`](fusion/) | **The CAD**: full export of the Fusion project, every part and assembly as `.f3d` + `.step`, `.f3z` for the main assemblies. Current design in `fusion/xshape/`, older work in `fusion/archive/`. Start here. |
 | [`models/`](models/) | MuJoCo models exported from Fusion, one folder per design × pose. Name table in [`models/README.md`](models/README.md). |
 | [`pipeline/`](pipeline/) | Fusion → MJCF scripts, in order, with the full procedure in [`pipeline/README.md`](pipeline/README.md). |
 | [`properties/`](properties/) | Fusion mass properties (PDF + extracted JSON) and the body ↔ part mappings. |
@@ -74,6 +74,7 @@ design is only the Fusion file in `fusion/`.
 | --- | --- | --- |
 | `Dash-01/CAD/Full_robot_cad/` | GitHub Release `legacy-cad` (zip) | **old versions**, see [`archive/legacy-cad/`](archive/legacy-cad/) |
 | `Dash-01/CAD/Export/` (STEP per part) | GitHub Release `legacy-cad` (zip) | **old versions** (v2 parts) |
+| Fusion Hub project `Dash-01` (export of 2026-11-24, local copy `Dash-01/Fusion_export_2026-11-24/`) | `fusion/` (same tree) | see [`fusion/README.md`](fusion/README.md) |
 | `Dash-01/MuJoCo/EXPORT_*` | `models/` (renamed) | see the name table |
 | `Dash-01/MuJoCo/loop_closure/` | `pipeline/close_loops.py`, `loops.json` | translated to English |
 | `Dash-01/MuJoCo/EXPORT_assembly-xshape/*.py` | `pipeline/checks/` | read the masses from the model instead of a hard-coded table |

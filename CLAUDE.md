@@ -6,7 +6,10 @@ Write code, docs and commit messages in English.
 
 ## Layout
 
-- `fusion/` — current Fusion design (`.f3z`, STEP). **The source of truth**; everything else is derived from it.
+- `fusion/` — full export of the Fusion Hub project (every design as `.f3d` + `.step`, `.f3z` for the main assemblies):
+  `xshape/` (current design, `EXPORT_assembly_v8.f3z`), `v2-export/`, `v2-full/`, `calibration/`, `archive/` (old work, kept),
+  `tools/` (export script, `check_f3z.py`). Never delete CAD files: move unused ones to `fusion/archive/`.
+  **The source of truth**; everything else is derived from it.
 - `models/<design>-<pose>-f<N>/` — MuJoCo models (`v2-standing-f34`, `v2-standing-f36`, `v2-init-f7`,
   `xshape-standing-f8`, `xshape-init-f8`). Name table and old names: `models/README.md`. Current design: `xshape-*-f8`.
 - `properties/` — `inerties_masses.pdf` (Fusion), `mass_properties.json` (its transcription), `body_mapping_*.json`.
@@ -49,7 +52,7 @@ All tests must pass. Run them after any change to `pipeline/`, `models/` or `pro
 
 ## Saving tokens
 
-- Do not open binaries: `**/*.stl`, `**/*.pdf`, `fusion/**` (`.f3z`, `.step`). Masses are in `properties/mass_properties.json`.
+- Do not open binaries: `**/*.stl`, `**/*.pdf`, `fusion/**/*.{f3z,f3d,step}`; check an archive with `fusion/tools/check_f3z.py`. Masses are in `properties/mass_properties.json`.
 - Models are ~16 KB of XML: read the bodies or joints you need (`grep -n '<body\|<joint'`), not the whole file.
 - `*_mass_audit.json`: use `jq` or a Python one-liner.
 

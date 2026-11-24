@@ -1,0 +1,10 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "script",
+  "author": "DASH-01",
+  "description": {
+    "": "Export every design of the active Data Panel folder (and its subfolders) as .f3z and .step"
+  },
+  "supportedOS": "windows|mac",
+  "editEnabled": true
+}

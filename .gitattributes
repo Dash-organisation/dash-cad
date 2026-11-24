@@ -1,0 +1,6 @@
+# Binary CAD files: never diff or merge
+*.f3z binary
+*.f3d binary
+*.stl binary
+*.pdf binary
+*.step -diff linguist-generated=true
