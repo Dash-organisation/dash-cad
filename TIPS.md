@@ -3,22 +3,48 @@
 What cost us time on DASH-01, so it does not cost you the same. Read it before changing the CAD.
 The full procedure is in [`pipeline/README.md`](pipeline/README.md); this page is the "why" and the traps.
 
-## 1. Fusion → MuJoCo export (ACDC4Robot)
+## 1. Preparing the CAD for MuJoCo
+
+This is the workflow that works. Follow it in this order.
+
+1. **Prepare each segment as one part, on its own origin.** A segment (thigh, tibia, foot, hip, …) is
+   often a sub-assembly of several printed and bought parts. In its own design:
+   - merge all its parts into **one body**;
+   - place it on the **origin of the design**, with the axes you want for this segment (X, Y, Z);
+   - save it as an independent design (`EXPORT_<part>_<left|right>`).
+
+   The origin of each part becomes its body frame in MuJoCo. A part that is not fixed on its own
+   origin gives a body with a strange frame and wrong inertia axes.
+2. **No timeline.** Turn the design history off (no timeline at the bottom of the window) in **every
+   part and in the assembly**: right-click on the root component → *Do not capture Design History*
+   (also in *Document Settings*). The design type must be **Hybrid**, not Assembly (*Document Settings*):
+   in Assembly mode the Fusion API breaks `allJoints` and the export fails with an
+   `InternalValidationError` that says nothing useful.
+3. **Build the final assembly from these parts.** Insert the body, hips, cams, thighs, pushrods, tibias,
+   achilles and feet, each with its correct origin. **Flat structure**: every component directly
+   under the root.
+4. **Revolute joints with correct limits.** Connect the parts with Revolute *Joints*, not constraints.
+   For each joint, set the **min and max angles** and enable **both limits** (otherwise the joint comes
+   out unlimited). Set the angle **0 in the standing pose** if possible: qpos 0 in MuJoCo is the pose the
+   file is saved in.
+5. **Close the loops with alignment constraints, not joints.** The robot has two closed loops per leg:
+   - the **knee four-bar**: the pushrod (driven by the cam) attached to the tibia;
+   - the **ankle**: the achilles attached to the foot.
+
+   The exporter **cannot export a closed loop**. So these two attachments are **alignment
+   (collinearity) constraints** between the pin axes, not joints. With them, the assembly moves like the
+   real robot: drive the joints and check that the mechanism works.
+6. **Before the export, remove the alignment constraints** (both sides), so that the loops are open,
+   and export. `pipeline/close_loops.py` closes the loops again in MuJoCo, at the pins. The pins must
+   be aligned (concentric) in the saved pose: the script finds the loops from the bores and stops if
+   they are apart (`bore centres X mm apart`).
+7. **Export MJCF, not URDF.** ACDC4Robot can write both; take **MJCF**. Then run the pipeline.
+
+Export details:
 
 - **Install ACDC4Robot v1.1.1 from GitHub, not from the App Store.** The App Store version is old,
   has no preflight and crashes with raw Python tracebacks. Check the SHA-256 (pipeline README §0) and
   make sure only one copy is installed (`find ~/Library -iname "*acdc4robot*"`).
-- **Design type must be Hybrid**, not Assembly (*Document Settings*). In Assembly mode the Fusion
-  API breaks `allJoints` and the export fails with an `InternalValidationError` that says nothing useful.
-- **Flat structure, Joints only.** Every component directly under the root, each with a solid body.
-  Use Revolute *Joints*; alignment *constraints* are ignored by the exporter and the part ends up
-  disconnected.
-- **The exporter cannot export a closed loop.** Keep two Fusion files: the closed assembly to design
-  and to *Drive Joints*, and an open copy where the closure joints (`pushrod↔tibia`, `achilles↔foot`)
-  are **deleted** (Delete, not Suppress). `close_loops.py` re-closes them in MuJoCo.
-- **Align the pins before deleting the closure joints.** The script finds the loops from the bores; if
-  the pins are not concentric at export, it stops (`bore centres X mm apart`).
-- **Enable both joint limits**, otherwise the joint comes out unlimited.
 - **ASCII names only.** The French Fusion names (`Révolution-12`) broke the previous team's scripts.
   Name components `EXPORT_<part>_<left|right>` from the start.
 - Expected preflight: **15 links, 14 joints**. Anything else means a structure problem.
@@ -67,6 +93,9 @@ The full procedure is in [`pipeline/README.md`](pipeline/README.md); this page i
   before the knee loop cannot close. Check the reachable range after every linkage change.
 - Hip and cam frames have not changed since v2; that is what lets `repose_init.py` reuse the v7 init
   pose. If you change a motor body frame, the init pose must be redefined in Fusion.
+- **Rods in compression rather than in tension.** The attachment of a rod working in tension is hard
+  to make strong in 3D print; in compression it is much easier. Keep that in mind when you place a
+  linkage.
 
 ## 5. Working with the repo
 
@@ -76,6 +105,27 @@ The full procedure is in [`pipeline/README.md`](pipeline/README.md); this page i
 
 ## 6. Lessons from building the robot
 
-> To be completed by the designer: printing (materials, tolerances, orientation), assembly order,
-> CFRP tubes and their attachments, bearings and fits, wiring and connectors, motors, and what you
-> would do differently.
+- **Assembly usually goes well.** The printed parts fit, with a little work.
+- **Ream the holes of printed parts.** Holes come out undersized or not round: pass a reamer to get the
+  right diameter and shape, especially for pins and bearings.
+- **Glue the carbon / printed sandwiches.** A CFRP plate or tube held against a printed part only holds
+  if it is **glued**. Screwed only, it comes loose and carries much less load.
+- **Hip plates: check the holes before printing.** On the current robot the big plates that hold the
+  two motors (`Hip_plate`) and the motor PCB holders do not have their holes in the right place. It
+  should be corrected in the CAD (`fusion/v2-full/Hip_v44`), but this is not verified: check against
+  the motors and PCBs before printing.
+- **The robot does not exactly match the CAD.** Several parts are not screwed as drawn: the design
+  evolved and some fixes were made on the spot. It holds for testing, but it is not very robust for a
+  long final test. Check the screws and fixations before a big run.
+- **Calibration plate.** The calibration plate (`fusion/calibration/`) is laser-cut MDF with pins. The
+  current plate works for the xshape. For a new pose or design, redraw the holes and laser-cut a new
+  MDF plate, then put the pins back: quick and cheap.
+
+## 7. Hardware worth adding
+
+- **Read the BMS over CAN on the Raspberry Pi.** The DALY BMS has a CAN port, unused today. Reading it
+  would give the battery temperature, the state of charge (SOC) and the cell voltages to the robot
+  stack and the logs.
+- **An emergency stop (kill switch) on the battery KEY.** The BMS has a KEY connector: pulling KEY to 0
+  cuts the battery. Wire a kill switch to it and set this behaviour in the **DALY BMS app** (the phone
+  app used to configure the BMS over Bluetooth). Check the polarity and test it before relying on it.
