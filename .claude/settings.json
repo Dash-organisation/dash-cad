@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git branch:*)",
+      "Bash(git switch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git pull:*)",
+      "Bash(git fetch:*)",
+      "Bash(graphify query:*)",
+      "Bash(graphify path:*)",
+      "Bash(graphify explain:*)",
+      "Bash(graphify section:*)",
+      "Bash(graphify update:*)",
+      "Bash(python -m pytest:*)",
+      "Bash(python3 -m pytest:*)",
+      "Bash(python pipeline/close_loops.py:*)",
+      "Bash(python pipeline/apply_mass_properties.py:*)",
+      "Bash(python pipeline/repose_init.py:*)",
+      "Bash(python pipeline/checks/static_stand.py:*)",
+      "Bash(python pipeline/checks/stability.py:*)",
+      "Bash(python pipeline/checks/sim_stand.py:*)"
+    ],
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(gh release:*)"
+    ],
+    "deny": [
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Read(**/*.stl)",
+      "Read(**/*.f3z)",
+      "Read(**/*.f3d)",
+      "Read(**/*.step)",
+      "Read(**/*.stp)",
+      "Read(./graphify-out/graph.json)"
+    ]
+  }
+}
