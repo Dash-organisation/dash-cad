@@ -1,0 +1,5 @@
+# dash-cad pipeline. Python >= 3.10. Tested with mujoco 4.0.1, scipy 1.18, numpy 2.x.
+mujoco>=3.15
+numpy>=1.26
+scipy>=1.11
+pytest>=8

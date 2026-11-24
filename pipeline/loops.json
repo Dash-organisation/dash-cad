@@ -1,0 +1,39 @@
+{
+  "_doc": "Configuration of close_loops.py. SI units (m). 'link' and 'target' are regexes on the body names of the exported MJCF. The attachment body is picked among the 'target' bodies by bore coincidence, not by name, so side-less names (foot-v4_1 / foot-v4_2) are handled.",
+  "loops": [
+    {
+      "name": "knee",
+      "_doc": "Knee four-bar: pushrod (cam -> tibia). The pushrod<->tibia joint is deleted in Fusion before export.",
+      "link": "pushrod",
+      "target": "tibia",
+      "count": 2
+    },
+    {
+      "name": "achilles",
+      "_doc": "Ankle loop: achilles (thigh -> foot). The achilles<->foot joint is deleted in Fusion before export.",
+      "link": "achilles",
+      "target": "foot",
+      "count": 2
+    }
+  ],
+  "defaults": {
+    "_doc": "Per-loop values, can be overridden in each 'loops' entry.",
+    "bore_radius_m": 0.004,
+    "radius_tol_m": 0.0004,
+    "target_radius_tol_m": 0.0006,
+    "max_bore_offset_m": 0.0005,
+    "eye_window_m": 0.025,
+    "axial_window_m": 0.03,
+    "min_inliers": 8,
+    "solref": "0.005 1",
+    "solimp": "0.95 0.99 0.001",
+    "_doc_solver": "solref/solimp = those of the knee connects of the previous team's model (12_PLANT_build_model.py)."
+  },
+  "checks": {
+    "tol_qpos0_m": 1e-05,
+    "tol_sim_m": 0.001,
+    "sim_duration_s": 1.0,
+    "expected_dof": 6,
+    "_doc_dof": "ACDC4Robot export = base fixed to the world: 3 DOF per leg (hip roll, cam, thigh). Set to null to skip the test."
+  }
+}

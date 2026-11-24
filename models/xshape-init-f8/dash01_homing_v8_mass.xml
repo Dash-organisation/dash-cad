@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<mujoco model="dash01_homing_v8_mass">
+    <compiler angle="radian" eulerseq="XYZ" inertiafromgeom="false" balanceinertia="false" />
+    <option timestep="0.002" integrator="implicitfast" />
+    <asset>
+        <mesh name="EXPORT_body-v4_1" file="meshes/EXPORT_body-v4_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="EXPORT_hip_right-v3_1" file="meshes/EXPORT_hip_right-v3_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="EXPORT_hip_left-v2_1" file="meshes/EXPORT_hip_left-v2_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="EXPORT_pushrod_left-v3_1" file="meshes/EXPORT_pushrod_left-v3_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="EXPORT_cam_left-v3_1" file="meshes/EXPORT_cam_left-v3_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="EXPORT_tibia_left-v2_1" file="meshes/EXPORT_tibia_left-v2_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="EXPORT_tibia_right-v2_1" file="meshes/EXPORT_tibia_right-v2_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="EXPORT_cam_right-v3_1" file="meshes/EXPORT_cam_right-v3_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="EXPORT_pushrod_right-v2_1" file="meshes/EXPORT_pushrod_right-v2_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="EXPORT_thight_right-v4_1" file="meshes/EXPORT_thight_right-v4_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="EXPORT_foot-v2_1" file="meshes/EXPORT_foot-v2_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="EXPORT_achilles_right-v3_1" file="meshes/EXPORT_achilles_right-v3_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="EXPORT_thight_left-v2_1" file="meshes/EXPORT_thight_left-v2_1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="EXPORT_foot-v2_2" file="meshes/EXPORT_foot-v2_2.stl" scale="0.001 0.001 0.001" />
+        <mesh name="EXPORT_achilles_left-v5_1" file="meshes/EXPORT_achilles_left-v5_1.stl" scale="0.001 0.001 0.001" />
+    </asset>
+    <worldbody>
+        <light directional="true" pos="-0.5 0.5 3" dir="0 0 -1" />
+        <body name="EXPORT_body-v4_1" pos="0.0 0.0 0.0" euler="0.0 0.0 0.0">
+            <geom name="EXPORT_body-v4_1_geom" type="mesh" mesh="EXPORT_body-v4_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+            <inertial mass="5.409075" pos="-0.002044 0.000454 -0.057873" fullinertia="0.0430363173682 0.0153227937266 0.0476491039504 8.63610443101e-05 0.000308909484416 -0.000167704235582" />
+            <body name="EXPORT_hip_right-v3_1" pos="0.02729492463057803 -0.1280000000000001 -0.05607499999999994" euler="-0.4363323129985822 6.661338147750939e-16 -2.7755575615628914e-17">
+                <joint name="Revolute-2" type="hinge" axis="1.0 -2.6820242122345316e-16 6.963669933570765e-16" pos="7.536942197086671e-08 1.387778578638831e-16 -6.9388414191294584e-18" range="-0.436332 0.436332" limited="true" />
+                <geom name="EXPORT_hip_right-v3_1_geom" type="mesh" mesh="EXPORT_hip_right-v3_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                <inertial mass="3.537567" pos="-0.035093 -0.009108 -3.8e-05" fullinertia="0.003614 0.05294 0.05095 -4.1923187e-05 -1.491477e-05 2.71602e-06" />
+                <body name="EXPORT_cam_right-v3_1" pos="-0.14999996758957326 -0.05550000000000012 -6.192797846055198e-08" euler="-7.195367854735049e-17 -0.9648861239967939 8.587785901690508e-17">
+                    <joint name="Revolute-30" type="hinge" axis="-2.0706102811261017e-16 -1.0 1.961806112534337e-16" pos="7.536940975604978e-08 3.0531131615741937e-16 -4.2976738121369847e-11" />
+                    <geom name="EXPORT_cam_right-v3_1_geom" type="mesh" mesh="EXPORT_cam_right-v3_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                    <inertial mass="0.106052" pos="0.029885 -0.001429 -0.000125" fullinertia="2.3647332e-05 0.0002312 0.0002154 3.625898e-06 3.17225e-07 1.392664e-06" />
+                    <body name="EXPORT_pushrod_right-v2_1" pos="0.12000042423722027 0.0015999999999999903 -1.401734836571633e-07" euler="9.673147432769728e-16 -0.880489363449652 -6.435457138481197e-16">
+                        <joint name="Revolute-29" type="hinge" axis="-7.320089709777418e-16 1.0 -5.222420818523388e-16" pos="-4.300000627652556e-07 -0.008599999999999747 7.235463645096984e-08" range="-3.312192 1.225664" limited="true" />
+                        <geom name="EXPORT_pushrod_right-v2_1_geom" type="mesh" mesh="EXPORT_pushrod_right-v2_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                        <inertial mass="0.060723" pos="-0.205 -0.005879 0" fullinertia="6.500268e-06 0.001464 0.001462 -4.55e-14 4.406e-15 -3.41e-19" />
+                        <site name="loop_knee_R_link" pos="-0.41 -0.0043 1.274409e-10" size="0.004" rgba="1 0.3 0.1 1" />
+                    </body>
+                </body>
+                <body name="EXPORT_thigh_right-v4_1" pos="0.0800000032323263 -0.0475000000000001 2.183550346784857e-08" euler="-2.2557211771504696e-15 -0.016858919326175004 -3.4947373343236344e-16">
+                    <joint name="Revolute-40" type="hinge" axis="8.185762518760532e-17 -1.0 -2.2075287553606416e-15" pos="7.175873883676421e-08 2.2204466167924954e-16 -2.3048496280846312e-08" range="-1.357983 0.523599" limited="true" />
+                    <geom name="EXPORT_thigh_right-v4_1_geom" type="mesh" mesh="EXPORT_thight_right-v4_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                    <inertial mass="0.439736246512" pos="0.00128169470619 -0.0150205998636 -0.183165380485" fullinertia="0.0088188143647 0.00897016023755 0.00024385330412 2.56325818605e-08 8.73815918274e-05 -3.35676888122e-07" />
+                    <body name="EXPORT_tibia_right-v2_1" pos="0.000158213679731655 -0.006909999999999972 -0.34952619729798795" euler="4.642815537427233e-17 0.3222066516220985 6.387371661148176e-16">
+                        <joint name="Revolute-41" type="hinge" axis="1.4285654056941385e-16 -1.0 -2.2976094736013125e-15" pos="-4.0630069304909626e-07 -0.018099999999999034 -0.0004997902948707653" range="-1.308997 0.139626" limited="true" />
+                        <geom name="EXPORT_tibia_right-v2_1_geom" type="mesh" mesh="EXPORT_tibia_right-v2_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                        <inertial mass="0.218767" pos="-0.242744 0.000101 0.000833" fullinertia="3.6076062e-05 0.005545 0.005515 -5.369529e-06 -3.2608007e-05 -7.14293e-07" />
+                        <body name="EXPORT_foot-v2_1" pos="-0.5000001864068732 -0.008100000000007539 -0.0004997827653589609" euler="1.018047035703964e-15 0.593117134731298 -2.9706664468831353e-15">
+                            <joint name="Revolute-39" type="hinge" axis="3.893554628133054e-15 -1.0 8.867284891740597e-16" pos="2.1145033710474585e-07 0.004700000000008447 2.2898950785002806e-07" range="-1.396263 0.436332" limited="true" />
+                            <geom name="EXPORT_foot-v2_1_geom" type="mesh" mesh="EXPORT_foot-v2_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                            <inertial mass="0.149072794083" pos="-0.00974243676499 2.91574861813e-05 -0.0677042837542" fullinertia="0.00136424616474 0.00138895786416 7.07664363223e-05 -1.85591767282e-08 0.000121199691962 -3.99198997129e-09" />
+                            <site name="loop_achilles_R_target" pos="0.024 -0.02249 -0.07" size="0.004" rgba="1 0.3 0.1 1" />
+                        </body>
+                        <site name="loop_knee_R_target" pos="-0.07 -0.00379 0.034" size="0.004" rgba="1 0.3 0.1 1" />
+                    </body>
+                    <body name="EXPORT_achilles_right-v3_1" pos="-0.02449999984420784 -0.035509999999999375 -0.2899994567469031" euler="2.2538106964402487e-15 0.07453210214624062 3.7551324086983715e-16">
+                        <joint name="Revolute-42" type="hinge" axis="-1.5353069874738774e-16 -1.0 1.46973737984673e-16" pos="4.619841126826584e-07 1.0000000000370823e-05 -2.3801361053132862e-07" />
+                        <geom name="EXPORT_achilles_right-v3_1_geom" type="mesh" mesh="EXPORT_achilles_right-v3_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                        <inertial mass="0.0503270068304" pos="-0.245357995205 -0.00805039570585 0.0022352471656" fullinertia="3.73296958441e-06 0.00159424801066 0.00159353618289 1.13896561241e-06 -3.77751954015e-07 3.19899085907e-07" />
+                        <site name="loop_achilles_R_link" pos="-0.492 -0.00199 -1.13928e-10" size="0.004" rgba="1 0.3 0.1 1" />
+                    </body>
+                </body>
+            </body>
+            <body name="EXPORT_hip_left-v2_1" pos="0.027294924630579056 0.12799999999999986 -0.05607500000000005" euler="0.4363323129985825 -2.220446049250313e-16 -2.831068712794149e-15">
+                <joint name="Revolute-3" type="hinge" axis="1.0 2.3692186016680327e-15 -1.5968560747640012e-15" pos="7.536942094391041e-08 1.387780566447787e-16 -1.3877908161931994e-17" range="-0.436332 0.436332" limited="true" />
+                <geom name="EXPORT_hip_left-v2_1_geom" type="mesh" mesh="EXPORT_hip_left-v2_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                <inertial mass="3.537567" pos="-0.035093 0.009108 3.8e-05" fullinertia="0.003614 0.05294 0.05095 4.1923187e-05 1.491477e-05 2.71602e-06" />
+                <body name="EXPORT_cam_left-v3_1" pos="-0.14999996735083312 0.05550000000000009 -6.209290996303518e-08" euler="5.977519583428509e-15 -0.9668714600433336 -3.463491795774609e-15">
+                    <joint name="Revolute-38" type="hinge" axis="-2.429665483319354e-15 1.0 -5.702113142151668e-16" pos="7.536935772638596e-08 -3.053111485939601e-16 9.756203071721325e-11" />
+                    <geom name="EXPORT_cam_left-v3_1_geom" type="mesh" mesh="EXPORT_cam_left-v3_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                    <inertial mass="0.106052" pos="0.029885 0.001435 2.687e-13" fullinertia="2.3647332e-05 0.0002314 0.0002153 -3.639748e-06 -1.665e-14 3.288e-17" />
+                    <body name="EXPORT_pushrod_left-v3_1" pos="0.1199997981415202 -0.0016099999999999656 3.325685167861886e-07" euler="-4.168039946355157e-15 -0.8781890321911572 3.7668528222287746e-15">
+                        <joint name="Revolute-37" type="hinge" axis="-5.50478115134577e-16 -1.0 -2.544800769988315e-15" pos="2.420848444056658e-07 0.008599999999999941 -2.8944116311102623e-07" range="-1.712251 2.825605" limited="true" />
+                        <geom name="EXPORT_pushrod_left-v3_1_geom" type="mesh" mesh="EXPORT_pushrod_left-v3_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                        <inertial mass="0.060723" pos="-0.205 0.005879 0" fullinertia="6.500268e-06 0.001464 0.001462 4.55e-14 -4.406e-15 1.051e-19" />
+                        <site name="loop_knee_L_link" pos="-0.41 0.0043 1.20162e-10" size="0.004" rgba="1 0.3 0.1 1" />
+                    </body>
+                </body>
+                <body name="EXPORT_thigh_left-v2_1" pos="0.0800000033356354 0.07750000000000017 2.2173933283270442e-08" euler="-1.3485004614260405e-15 -0.015648207094618005 -4.001809235025625e-16">
+                    <joint name="Revolute-43" type="hinge" axis="-2.7681843491642586e-15 1.0 2.4647735597353184e-15" pos="7.167799816479808e-08 -0.029999999999999832 -2.3298372234157604e-08" range="-0.523599 1.357866" limited="true" />
+                    <geom name="EXPORT_thigh_left-v2_1_geom" type="mesh" mesh="EXPORT_thight_left-v2_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                    <inertial mass="0.439736159677" pos="0.00128169470619 -0.0150205998636 -0.183165380485" fullinertia="0.00881881262326 0.00897015846622 0.000243853255966 2.5632576802e-08 8.73815745723e-05 -3.35676821836e-07" />
+                    <body name="EXPORT_achilles_left-v5_1" pos="-0.02450100996683304 0.00551000000000057 -0.2900102492886933" euler="-5.763847549310607e-17 0.07530226376722071 2.3417332695843217e-15">
+                        <joint name="Revolute-46" type="hinge" axis="6.004300280622487e-16 -1.0 -2.5007068971969257e-15" pos="-1.238222005795743e-07 -9.999999999760226e-06 1.0340818028271595e-05" />
+                        <geom name="EXPORT_achilles_left-v5_1_geom" type="mesh" mesh="EXPORT_achilles_left-v5_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                        <inertial mass="0.0503270068304" pos="-0.245357995205 0.00805039570585 0.00224524716565" fullinertia="3.73296956683e-06 0.00159424801065 0.00159353618289 -1.13896561237e-06 -3.77751956685e-07 -3.19899085915e-07" />
+                        <site name="loop_achilles_L_link" pos="-0.492 0.00199 9.999142e-06" size="0.004" rgba="1 0.3 0.1 1" />
+                    </body>
+                    <body name="EXPORT_tibia_left-v2_1" pos="3.4069021452186234e-07 -0.014990000000004125 -0.34999999058717274" euler="-2.5793786043338756e-16 0.3228888454089216 2.18363464074759e-15">
+                        <joint name="Revolute-47" type="hinge" axis="-1.3153300510173304e-15 1.0 2.4530357199606142e-15" pos="-6.533060634648548e-08 0.0100000000000052 -3.175858094694083e-07" range="-0.134151 1.227206" limited="true" />
+                        <geom name="EXPORT_tibia_left-v2_1_geom" type="mesh" mesh="EXPORT_tibia_left-v2_1" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                        <inertial mass="0.222524" pos="-0.239735 4.5e-05 0.001218" fullinertia="3.8475901e-05 0.005665 0.005633 -3.23512e-06 -4.7491043e-05 -3.0855e-07" />
+                        <body name="EXPORT_foot-v2_2" pos="-0.5000001052212211 3.073929999430902e-15 -8.881616316708252e-08" euler="-5.678450648883068e-17 0.593739632796888 2.430589641672559e-15">
+                            <joint name="Revolute-45" type="hinge" axis="3.5873615194323917e-16 -1.0 -2.615746542876435e-15" pos="-1.0952795151803965e-07 -0.004699999999998483 1.0257749922949087e-07" range="-1.396263 0.436332" limited="true" />
+                            <geom name="EXPORT_foot-v2_2_geom" type="mesh" mesh="EXPORT_foot-v2_2" pos="0 0 0" euler="0 0 0" contype="0" conaffinity="0" group="2" />
+                            <inertial mass="0.149072794083" pos="-0.00974243676499 2.91574861812e-05 -0.0677042837542" fullinertia="0.00136424616474 0.00138895786416 7.07664363223e-05 -1.85591767233e-08 0.000121199691962 -3.99198997021e-09" />
+                            <site name="loop_achilles_L_target" pos="0.024 0.02249 -0.07" size="0.004" rgba="1 0.3 0.1 1" />
+                        </body>
+                        <site name="loop_knee_L_target" pos="-0.07 -0.00432 0.0345" size="0.004" rgba="1 0.3 0.1 1" />
+                    </body>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+    <equality>
+        <connect name="loop_knee_R" site1="loop_knee_R_link" site2="loop_knee_R_target" solref="0.005 1" solimp="0.95 0.99 0.001" />
+        <connect name="loop_knee_L" site1="loop_knee_L_link" site2="loop_knee_L_target" solref="0.005 1" solimp="0.95 0.99 0.001" />
+        <connect name="loop_achilles_R" site1="loop_achilles_R_link" site2="loop_achilles_R_target" solref="0.005 1" solimp="0.95 0.99 0.001" />
+        <connect name="loop_achilles_L" site1="loop_achilles_L_link" site2="loop_achilles_L_target" solref="0.005 1" solimp="0.95 0.99 0.001" />
+    </equality>
+</mujoco>

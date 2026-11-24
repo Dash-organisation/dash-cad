@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.DS_Store
+__MACOSX/
+MUJOCO_LOG.TXT
+*.tmp.xml
+.test_*.xml
+# Fusion temporary / backup files
+*.f3d.bak
+~$*

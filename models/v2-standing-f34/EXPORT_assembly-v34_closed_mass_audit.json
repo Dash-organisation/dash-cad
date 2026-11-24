@@ -1,0 +1,415 @@
+{
+ "source": "EXPORT_assembly-v34_closed.xml",
+ "properties": "mass_properties.json",
+ "mapping": "body_mapping_v2.json",
+ "mujoco_version": "4.0.1",
+ "cad_mass_kg": 5.360706753427105,
+ "extra_body_mass_kg": 1.0,
+ "total_mass_kg": 14.594154,
+ "initial_loop_gap_mm": {
+  "loop_EXPORT_pushrod_left-v3_1": 0.0002731062937531925,
+  "loop_EXPORT_pushrod_right-v2_1": 0.00019648707880318893,
+  "loop_EXPORT_achilles_left-v7_1": 0.0004734601422672458,
+  "loop_EXPORT_achilles_right-v4_1": 0.00020754359749156689
+ },
+ "notes": [],
+ "bodies": [
+  {
+   "body": "EXPORT_body-v4_1",
+   "pdf_part": "Body",
+   "method": "pdf",
+   "cad_mass_kg": 1.1678499088860506,
+   "new_mass_kg": 5.409075,
+   "com_m": [
+    -0.0020440000000000002,
+    0.00045400000000000003,
+    -0.057873
+   ],
+   "fullinertia_kg_m2": [
+    0.043036317368155455,
+    0.015322793726575303,
+    0.047649103950375075,
+    8.636104431014442e-05,
+    0.0003089094844156654,
+    -0.00016770423558229336
+   ],
+   "principal_inertia_kg_m2": [
+    0.015321644514927396,
+    0.04301606421956713,
+    0.04767050631061133
+   ],
+   "pdf_parallel_axis_relative_error": 0.00011365605295634635
+  },
+  {
+   "body": "EXPORT_hip_left-v2_1",
+   "pdf_part": "Hip_left",
+   "method": "pdf",
+   "cad_mass_kg": 1.0178564410715387,
+   "new_mass_kg": 3.537567,
+   "com_m": [
+    -0.035093000000000006,
+    0.009108000000000002,
+    3.8e-05
+   ],
+   "fullinertia_kg_m2": [
+    0.003614,
+    0.05294,
+    0.05095,
+    4.1923187e-05,
+    1.4914770000000001e-05,
+    2.71602e-06
+   ],
+   "principal_inertia_kg_m2": [
+    0.003613959670713646,
+    0.05095000095639722,
+    0.0529400393728891
+   ],
+   "pdf_parallel_axis_relative_error": 5.96013816102986e-05
+  },
+  {
+   "body": "EXPORT_hip_right-v3_1",
+   "pdf_part": "Hip_right",
+   "method": "pdf",
+   "cad_mass_kg": 1.0178564410715383,
+   "new_mass_kg": 3.537567,
+   "com_m": [
+    -0.035093000000000006,
+    -0.009108000000000002,
+    -3.8e-05
+   ],
+   "fullinertia_kg_m2": [
+    0.003614,
+    0.05294,
+    0.05095,
+    -4.1923187e-05,
+    -1.4914770000000001e-05,
+    2.71602e-06
+   ],
+   "principal_inertia_kg_m2": [
+    0.003613959670713646,
+    0.05095000095639722,
+    0.0529400393728891
+   ],
+   "pdf_parallel_axis_relative_error": 5.96013816102986e-05
+  },
+  {
+   "body": "EXPORT_thigh_left-v3_1",
+   "pdf_part": "Thigh_left",
+   "method": "pdf",
+   "cad_mass_kg": 0.46161441765161243,
+   "new_mass_kg": 0.471484,
+   "com_m": [
+    0.00066,
+    0.015321,
+    -0.190933
+   ],
+   "fullinertia_kg_m2": [
+    0.009696,
+    0.009812000000000001,
+    0.0002928,
+    4.028614000000001e-06,
+    5.1842086000000005e-05,
+    2.0668416000000004e-05
+   ],
+   "principal_inertia_kg_m2": [
+    0.0002924694142160273,
+    0.009696137757643546,
+    0.009812192828140429
+   ],
+   "pdf_parallel_axis_relative_error": 0.00019201362598106957
+  },
+  {
+   "body": "EXPORT_thigh_right-v3_1",
+   "pdf_part": "Thigh_right",
+   "method": "pdf",
+   "cad_mass_kg": 0.4616143264969992,
+   "new_mass_kg": 0.471484,
+   "com_m": [
+    0.00066,
+    -0.015321,
+    -0.190933
+   ],
+   "fullinertia_kg_m2": [
+    0.009696,
+    0.009812000000000001,
+    0.0002928,
+    -4.028614000000001e-06,
+    5.1842086000000005e-05,
+    -2.0668416000000004e-05
+   ],
+   "principal_inertia_kg_m2": [
+    0.0002924694142160273,
+    0.009696137757643546,
+    0.009812192828140429
+   ],
+   "pdf_parallel_axis_relative_error": 0.00019201362598106957
+  },
+  {
+   "body": "EXPORT_cam_left-v3_1",
+   "pdf_part": "Cam_left",
+   "method": "pdf",
+   "cad_mass_kg": 0.04592600075904326,
+   "new_mass_kg": 0.10605200000000001,
+   "com_m": [
+    0.029885000000000002,
+    0.001435,
+    2.687e-13
+   ],
+   "fullinertia_kg_m2": [
+    2.3647332e-05,
+    0.00023140000000000001,
+    0.0002153,
+    -3.639748e-06,
+    -1.6650000000000004e-14,
+    3.2880000000000004e-17
+   ],
+   "principal_inertia_kg_m2": [
+    2.358358455504894e-05,
+    0.0002153,
+    0.0002314637474449511
+   ],
+   "pdf_parallel_axis_relative_error": 0.00019985075927616194
+  },
+  {
+   "body": "EXPORT_cam_right-v3_1",
+   "pdf_part": "Cam_right",
+   "method": "pdf",
+   "cad_mass_kg": 0.045926000759053114,
+   "new_mass_kg": 0.10605200000000001,
+   "com_m": [
+    0.029885000000000002,
+    -0.0014290000000000001,
+    -0.000125
+   ],
+   "fullinertia_kg_m2": [
+    2.3647332e-05,
+    0.0002312,
+    0.0002154,
+    3.6258980000000002e-06,
+    3.1722500000000006e-07,
+    1.392664e-06
+   ],
+   "principal_inertia_kg_m2": [
+    2.3583560558122412e-05,
+    0.00021527818517937044,
+    0.000231385586262507
+   ],
+   "pdf_parallel_axis_relative_error": 0.0002512245392637697
+  },
+  {
+   "body": "EXPORT_pushrod_left-v3_1",
+   "pdf_part": "Pushrod_left",
+   "method": "pdf",
+   "cad_mass_kg": 0.10955214594424194,
+   "new_mass_kg": 0.060723,
+   "com_m": [
+    -0.20500000000000002,
+    0.005879,
+    0.0
+   ],
+   "fullinertia_kg_m2": [
+    6.500268e-06,
+    0.001464,
+    0.0014620000000000002,
+    4.55e-14,
+    -4.406e-15,
+    1.0510000000000001e-19
+   ],
+   "principal_inertia_kg_m2": [
+    6.500268e-06,
+    0.001462,
+    0.001463999999999999
+   ],
+   "pdf_parallel_axis_relative_error": 2.88657868526871e-05
+  },
+  {
+   "body": "EXPORT_pushrod_right-v2_1",
+   "pdf_part": "Pushrod_right",
+   "method": "pdf",
+   "cad_mass_kg": 0.1095521459442422,
+   "new_mass_kg": 0.060723,
+   "com_m": [
+    -0.20500000000000002,
+    -0.005879,
+    0.0
+   ],
+   "fullinertia_kg_m2": [
+    6.500268e-06,
+    0.001464,
+    0.0014620000000000002,
+    -4.55e-14,
+    4.406e-15,
+    -3.4100000000000005e-19
+   ],
+   "principal_inertia_kg_m2": [
+    6.500268e-06,
+    0.0014620000000000002,
+    0.0014639999999999987
+   ],
+   "pdf_parallel_axis_relative_error": 2.88657868526871e-05
+  },
+  {
+   "body": "EXPORT_tibia_left-v2_1",
+   "pdf_part": "Tibia_left",
+   "method": "pdf",
+   "cad_mass_kg": 0.21577006352225897,
+   "new_mass_kg": 0.222524,
+   "com_m": [
+    -0.23973500000000003,
+    4.4999999999999996e-05,
+    0.001218
+   ],
+   "fullinertia_kg_m2": [
+    3.8475901e-05,
+    0.005665000000000001,
+    0.005633,
+    -3.2351200000000003e-06,
+    -4.7491043e-05,
+    -3.0855000000000005e-07
+   ],
+   "principal_inertia_kg_m2": [
+    3.807092312229649e-05,
+    0.005633400614935548,
+    0.005665004362942156
+   ],
+   "pdf_parallel_axis_relative_error": 0.00023973407276309562
+  },
+  {
+   "body": "EXPORT_tibia_right-v2_1",
+   "pdf_part": "Tibia_right",
+   "method": "pdf",
+   "cad_mass_kg": 0.2157700635222531,
+   "new_mass_kg": 0.218767,
+   "com_m": [
+    -0.24274400000000002,
+    0.000101,
+    0.000833
+   ],
+   "fullinertia_kg_m2": [
+    3.6076062e-05,
+    0.0055450000000000004,
+    0.005515,
+    -5.369529000000001e-06,
+    -3.2608007e-05,
+    -7.14293e-07
+   ],
+   "principal_inertia_kg_m2": [
+    3.587675960588278e-05,
+    0.005515178451792882,
+    0.005545020850601235
+   ],
+   "pdf_parallel_axis_relative_error": 0.00022933640540785316
+  },
+  {
+   "body": "EXPORT_achilles_left-v7_1",
+   "pdf_part": "Achilles_left",
+   "method": "pdf",
+   "cad_mass_kg": 0.049756170629170746,
+   "new_mass_kg": 0.05713000000000001,
+   "com_m": [
+    -0.253588,
+    -0.009839,
+    0.004582
+   ],
+   "fullinertia_kg_m2": [
+    5.043299e-06,
+    0.00205,
+    0.00205,
+    7.92261e-07,
+    -4.15827e-07,
+    8.75314e-07
+   ],
+   "principal_inertia_kg_m2": [
+    5.04290736745053e-06,
+    0.002049125042993482,
+    0.0020508753486390688
+   ],
+   "pdf_parallel_axis_relative_error": 6.67165755715543e-05
+  },
+  {
+   "body": "EXPORT_achilles_right-v4_1",
+   "pdf_part": "Achilles_right",
+   "method": "pdf",
+   "cad_mass_kg": 0.04975617062917068,
+   "new_mass_kg": 0.05713000000000001,
+   "com_m": [
+    -0.253588,
+    0.009839,
+    0.004582
+   ],
+   "fullinertia_kg_m2": [
+    5.043299e-06,
+    0.00205,
+    0.00205,
+    -7.92261e-07,
+    -4.15827e-07,
+    -8.75314e-07
+   ],
+   "principal_inertia_kg_m2": [
+    5.04290736745053e-06,
+    0.002049125042993482,
+    0.0020508753486390688
+   ],
+   "pdf_parallel_axis_relative_error": 6.67165755715543e-05
+  },
+  {
+   "body": "EXPORT_foot-v4_1",
+   "pdf_part": "Foot",
+   "method": "pdf",
+   "cad_mass_kg": 0.19595322826996595,
+   "new_mass_kg": 0.13893799999999998,
+   "com_m": [
+    0.041194,
+    4.4e-05,
+    -0.013067
+   ],
+   "fullinertia_kg_m2": [
+    6.227190400000001e-05,
+    0.0013880000000000001,
+    0.001394,
+    -1.5700200000000002e-07,
+    -0.0001145,
+    -4.6741e-08
+   ],
+   "principal_inertia_kg_m2": [
+    5.249906249970447e-05,
+    0.0013879999493015742,
+    0.0014037728921987224
+   ],
+   "pdf_parallel_axis_relative_error": 0.0003073977771541763
+  },
+  {
+   "body": "EXPORT_foot-v4_2",
+   "pdf_part": "Foot",
+   "method": "pdf",
+   "cad_mass_kg": 0.19595322826996595,
+   "new_mass_kg": 0.13893799999999998,
+   "com_m": [
+    0.041194,
+    4.4e-05,
+    -0.013067
+   ],
+   "fullinertia_kg_m2": [
+    6.227190400000001e-05,
+    0.0013880000000000001,
+    0.001394,
+    -1.5700200000000002e-07,
+    -0.0001145,
+    -4.6741e-08
+   ],
+   "principal_inertia_kg_m2": [
+    5.249906249970447e-05,
+    0.0013879999493015742,
+    0.0014037728921987224
+   ],
+   "pdf_parallel_axis_relative_error": 0.0003073977771541763
+  }
+ ],
+ "inputs": {
+  "EXPORT_assembly-v34_closed.xml": "2737e36ccd3a981b2b04a757184c15c66bcb62eecf3533999016e9a543153d56",
+  "mass_properties.json": "0cd605ac74a0853204784a1b3f4760dfbee364a086dc568e61f92bc43180ff01",
+  "body_mapping_v2.json": "cb0d5b5529645d6a83fd41e43af88ebfb379b6c4eb7d089df7ee0dd142c833a0",
+  "inerties_masses.pdf": "d98b2ee26c6a7732f57f939a18e1ac4cb8ddc1b66aefe1f93f732bdd553eaf23"
+ },
+ "output_sha256": "fb7b6093f9d3e5b1c7e6f0057dc47f310d2c6da95874bff20f90daa0bc814c56"
+}
