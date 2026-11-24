@@ -14,3 +14,6 @@ MUJOCO_LOG.TXT
 
 # graphify knowledge graph (built locally)
 graphify-out/
+
+# Editor config written by Fusion when a script is edited
+.vscode/

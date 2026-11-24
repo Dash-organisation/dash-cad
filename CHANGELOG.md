@@ -4,6 +4,8 @@ Newest first. Fusion version = version number of the Fusion document the export 
 
 ## xshape, Fusion v8 (2026-11-04): current design
 
+- CAD: [`fusion/xshape/EXPORT_assembly_v8.f3z`](fusion/xshape/) (exported 2026-11-24).
+
 - **Achilles relocated**: it now crosses the leg. Pins on the thigh at (−24.5, ·, −290) mm in the thigh
   frame (v2: (0, ·, −415)); on the foot at (24, ·, −70) mm. Pin distance 512 → 492 mm.
 - New parts: thigh (`thight_*`), foot (`foot-v2_*`, new frame), achilles. Body, hips, cams, pushrods,
